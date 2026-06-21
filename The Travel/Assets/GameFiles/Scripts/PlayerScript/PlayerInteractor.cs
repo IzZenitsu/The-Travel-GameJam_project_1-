@@ -11,8 +11,16 @@ public class PlayerInteractor : MonoBehaviour
         {
             if (hit.collider.TryGetComponent(out IIntractable interact))
             {
-                interact.PickUp();
+                if (hit.collider.CompareTag("Objects"))
+                {
+                    interact.PickUp();
+                }
+                else if (hit.collider.CompareTag("Door"))
+                {
+                    interact.Interact();
+                }
             }
+
         }
     }
 }

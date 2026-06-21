@@ -5,10 +5,28 @@ public class Interactable : MonoBehaviour, IIntractable
     public string DisplayName;
     public GameObject Object;
     public Transform PickUpSlot;
+    public Animator Dooranimator;
+    public bool isdooropen;
+
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        if (isdooropen && Input.GetKeyDown(KeyCode.E))
+        {
+            Dooranimator.SetBool("DoorOpen", false);
+            Debug.Log("Door Closed");
+            isdooropen = false;
+        }
+        else if (!isdooropen && Input.GetKeyDown(KeyCode.E))
+        {
+            Dooranimator.SetBool("DoorOpen", true);
+
+            Debug.Log("Door Open");
+            isdooropen = true;
+        }
     }
+
+
+    
 
     public void PickUp()
     {
