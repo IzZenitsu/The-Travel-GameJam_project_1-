@@ -21,6 +21,8 @@ public class PlayerInteractor : MonoBehaviour
                 {
                     interact.PickUp();
                     interactiveObj.text = "Pick Up";
+
+                    
                 }
                 else if (hit.collider.CompareTag("Door"))
                 {
