@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 
@@ -39,6 +40,10 @@ public class UI : MonoBehaviour
         pausePanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
+    }
+    public void MainMenuBtnClicked()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
