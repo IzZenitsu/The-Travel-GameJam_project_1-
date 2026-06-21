@@ -1,9 +1,13 @@
+using TMPro;    
 using UnityEngine;
 
 public class PlayerInteractor : MonoBehaviour
 {
     
     public LayerMask Layer;
+    public GameObject interactiveUI;
+    public TextMeshProUGUI interactiveObj;
+
     void Update()
     {
         RaycastHit hit;
