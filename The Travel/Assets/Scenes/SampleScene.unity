@@ -8876,6 +8876,10 @@ PrefabInstance:
       propertyPath: interactiveObj
       value: 
       objectReference: {fileID: 239494823}
+    - target: {fileID: 5435171769672198997, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7261659112931104393, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
       propertyPath: m_Name
       value: Player
