@@ -44,6 +44,5 @@ public class UI : MonoBehaviour
     public void MainMenuBtnClicked()
     {
         SceneManager.LoadScene(0);
-    }
-
+    }   
 }
