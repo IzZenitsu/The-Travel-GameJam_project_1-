@@ -394,3 +394,4 @@ MonoBehaviour:
   MainCamera: {fileID: 5435171769672198997}
   Offset: {x: 0, y: 0, z: 0}
   player: {fileID: 7261659112931104393}
+  ClockHand: {fileID: 6983545135485043585, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
