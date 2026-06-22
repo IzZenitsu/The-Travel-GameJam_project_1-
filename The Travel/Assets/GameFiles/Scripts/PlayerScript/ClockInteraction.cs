@@ -60,5 +60,9 @@ public class ClockInteraction : MonoBehaviour
             
         }
         #endregion
+        if (ischildCameraOn && Input.GetKeyDown(KeyCode.Space))
+        {
+            //Spin the clock
+            Debug.Log("Clock spun!");
+        }
     }
-}
