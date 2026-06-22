@@ -8,7 +8,8 @@ public class ClockInteraction : MonoBehaviour
     private Renderer Playerenderer;
     private PlayerMovement playermovment;
     private ThrowingScript throwingscript;
-
+    private int ClockRotationAngleCount;
+    private float ClockRotationAngle;                                           
     #endregion
 
     #region PublicVariables
@@ -31,7 +32,7 @@ public class ClockInteraction : MonoBehaviour
         {
             GameObject child = PickUpSlot.GetChild(0).gameObject;
 
-            if ( child.GetComponent<Interactable>().DisplayName == "Clock")
+            if (child.GetComponent<Interactable>().DisplayName == "Clock")
             {
                 if (Input.GetKeyDown(KeyCode.G) && !ischildCameraOn)
                 {
@@ -56,8 +57,8 @@ public class ClockInteraction : MonoBehaviour
                 }
 
             }
-            
-            
+
+
         }
         #endregion
         if (ischildCameraOn && Input.GetKeyDown(KeyCode.Space))
@@ -66,3 +67,26 @@ public class ClockInteraction : MonoBehaviour
             Debug.Log("Clock spun!");
         }
     }
+    void ClockHandSpin()
+    {
+        ClockRotationAngle = Random.Range(0, 4);
+
+        if (ClockRotationAngleCount == 1)
+        {
+            ClockRotationAngle = 90f;
+        }
+        if (ClockRotationAngleCount == 2)
+        {
+            ClockRotationAngle = 180f;
+        } 
+        if(ClockRotationAngleCount == 3)
+        {
+            ClockRotationAngle = 270f;
+        }
+        if (ClockRotationAngleCount == 4)
+        {
+            ClockRotationAngle = 360f;
+        }
+
+    }
+}
