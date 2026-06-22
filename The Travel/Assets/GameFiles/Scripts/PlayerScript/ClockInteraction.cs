@@ -9,8 +9,6 @@ public class ClockInteraction : MonoBehaviour
     private PlayerMovement playermovment;
     private ThrowingScript throwingscript;
     private int ClockRotationAngleCount;
-    private float ClockRotationAngle;
-    private GameObject ClockHand;
     #endregion
     
     #region PublicVariables
@@ -18,6 +16,9 @@ public class ClockInteraction : MonoBehaviour
     public Camera MainCamera;
     public Vector3 Offset;
     public GameObject player;
+    public  Animator ClockHandAnimator;
+    public GameObject clockHand;
+
     #endregion
 
     void Start()
@@ -37,7 +38,6 @@ public class ClockInteraction : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.G) && !ischildCameraOn)
                 {
-                    ClockHand = child.transform.GetChild(1).gameObject;
                     throwingscript.throwingUi.SetActive(false);
                     throwingscript.enabled = false;
                     Playerenderer.enabled = false;
@@ -72,24 +72,29 @@ public class ClockInteraction : MonoBehaviour
     }
     void ClockHandSpin()
     {
-        ClockRotationAngleCount = Random.Range(0, 4);
+        ClockRotationAngleCount = Random.Range(0, 3);
 
         if (ClockRotationAngleCount == 1)
         {
-        
+            ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
+            clockHand.transform.Rotate(0,0,0);
+
         }
         if (ClockRotationAngleCount == 2)
         {
-        
+            ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
+            clockHand.transform.Rotate(0, 0, 0);
+
+
+
         }
         if (ClockRotationAngleCount == 3)
         {
-        
-        }
-        if (ClockRotationAngleCount == 4)
-        {
-        
-        }          
-    }
+            ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
+            clockHand.transform.Rotate(0, 0, 0);
 
+
+
+        }
+    }
 }

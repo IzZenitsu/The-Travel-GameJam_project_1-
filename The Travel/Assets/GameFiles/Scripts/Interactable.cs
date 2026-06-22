@@ -33,11 +33,12 @@ public class Interactable : MonoBehaviour, IIntractable
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(Object);
-            GameObject a = Instantiate(Object, PickUpSlot.position, Quaternion.Euler(-90,-180,0));
-            a.GetComponent<Collider>().enabled = false;
-            a.GetComponent<Rigidbody>().useGravity = false;
-            a.transform.SetParent(PickUpSlot.transform);
+            
+            
+            Object.GetComponent<Collider>().enabled = false;
+            Object.GetComponent<Rigidbody>().useGravity = false;
+            Object.transform.SetParent(PickUpSlot.transform);
+            Object.transform.position = PickUpSlot.transform.position;
         }
       
     }
