@@ -8970,15 +8970,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1037510994395197280, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.36462
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 1037510994395197280, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.55
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 1037510994395197280, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.50364
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 1037510994395197280, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9008,6 +9008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1539706367729434878, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
+      propertyPath: PickUpSlot
+      value: 
+      objectReference: {fileID: 397611012}
     - target: {fileID: 6983545135485043585, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
       propertyPath: m_Name
       value: CLOCK

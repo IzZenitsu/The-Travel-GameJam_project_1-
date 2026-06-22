@@ -18,7 +18,8 @@ public class Interactable : MonoBehaviour, IIntractable
         }
         else if (!isdooropen && Input.GetKeyDown(KeyCode.E))
         {
-            Dooranimator.SetBool("DoorOpen", true);
+            Dooranimator.SetBool("DoorOpen", true
+                );
 
             Debug.Log("Door Open");
             isdooropen = true;
@@ -33,7 +34,7 @@ public class Interactable : MonoBehaviour, IIntractable
         if (Input.GetKeyDown(KeyCode.E))
         {
             Destroy(Object);
-            GameObject a = Instantiate(Object, PickUpSlot.position ,Quaternion.identity);
+            GameObject a = Instantiate(Object, PickUpSlot.position, Quaternion.Euler(-90,-180,0));
             a.GetComponent<Collider>().enabled = false;
             a.GetComponent<Rigidbody>().useGravity = false;
             a.transform.SetParent(PickUpSlot.transform);
