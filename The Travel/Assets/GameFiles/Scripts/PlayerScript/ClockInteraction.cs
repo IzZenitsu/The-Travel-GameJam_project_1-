@@ -1,4 +1,6 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClockInteraction : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class ClockInteraction : MonoBehaviour
     public GameObject player;
     public  Animator ClockHandAnimator;
     public GameObject clockHand;
+    public GameObject clockInteractionUI;
+    public GameObject spinUI;
 
     #endregion
 
@@ -36,6 +40,7 @@ public class ClockInteraction : MonoBehaviour
 
             if (child.GetComponent<Interactable>().DisplayName == "Clock")
             {
+                clockInteractionUI.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.G) && !ischildCameraOn)
                 {
                     throwingscript.throwingUi.SetActive(false);
@@ -46,6 +51,7 @@ public class ClockInteraction : MonoBehaviour
                     childCamera = child.transform.GetChild(0).gameObject;
                     childCamera.GetComponent<Camera>().enabled = true;
                     ischildCameraOn = true;
+                    spinUI.SetActive(true);
                 }
                 else if (Input.GetKeyDown(KeyCode.G) && ischildCameraOn)
                 {
@@ -56,12 +62,18 @@ public class ClockInteraction : MonoBehaviour
                     MainCamera.enabled = (true);
                     ischildCameraOn = false;
                     childCamera.GetComponent<Camera>().enabled = false;
+                    spinUI.SetActive(false);
                 }
 
+            }
+            else 
+            {
+                clockInteractionUI.SetActive(false);
             }
 
 
         }
+        else { clockInteractionUI.SetActive(false); }
         #endregion
         if (ischildCameraOn && Input.GetKeyDown(KeyCode.Space))
         {
@@ -78,23 +90,31 @@ public class ClockInteraction : MonoBehaviour
         {
             ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
             clockHand.transform.Rotate(0,0,0);
-
+            Invoke("SceneChangeToScene2", 9f);
         }
         if (ClockRotationAngleCount == 2)
         {
             ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
             clockHand.transform.Rotate(0, 0, 0);
-
-
-
+            Invoke("SceneChangeToScene3", 9f);
         }
         if (ClockRotationAngleCount == 3)
         {
             ClockHandAnimator.SetInteger("TimeChange", ClockRotationAngleCount);
             clockHand.transform.Rotate(0, 0, 0);
-
-
-
+            Invoke("SceneChangeToScene4", 9f);
         }
+    }
+    void SceneChangeToScene2()
+    {
+        SceneManager.LoadScene(2);
+    }
+    void SceneChangeToScene3()
+    {
+        SceneManager.LoadScene(3);
+    }
+    void SceneChangeToScene4()
+    {
+        SceneManager.LoadScene(4);
     }
 }
