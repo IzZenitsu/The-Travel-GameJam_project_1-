@@ -1,6 +1,8 @@
+using System.Xml.Serialization;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MarioMovement : MonoBehaviour
 {
@@ -48,7 +50,32 @@ public class MarioMovement : MonoBehaviour
 
 
     }
-   
+    void Start()
+    {
+        controller.transform.position = new Vector3(-236.47f, 4.97f, -108.45f);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("BlockGround"))
+        {
+            controller.transform.position = new Vector3(-236.47f , 4.97f , -108.45f );
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.transform.CompareTag("BlockGround"))
+        {
+            controller.transform.position = new Vector3(-236.47f, 4.97f, -108.45f);
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Teleporter"))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 
-    
+
+
 }

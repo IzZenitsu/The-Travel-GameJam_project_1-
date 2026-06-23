@@ -8,6 +8,8 @@ TagManager:
   - Objects
   - Clock
   - TV
+  - BlockGround
+  - Teleporter
   layers:
   - Default
   - TransparentFX
