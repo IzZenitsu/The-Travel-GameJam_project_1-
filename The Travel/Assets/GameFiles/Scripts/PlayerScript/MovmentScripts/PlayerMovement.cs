@@ -50,7 +50,16 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(moveDir * MovmentSpeed * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Space) && isgrounded)
         {
+            
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+        if (!isgrounded)
+        {
+            MovmentSpeed = 20f;
+        }
+        if (isgrounded)
+        {
+            MovmentSpeed = 30f;
         }
 
         #endregion

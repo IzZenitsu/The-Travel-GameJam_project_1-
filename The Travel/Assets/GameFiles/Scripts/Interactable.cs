@@ -8,6 +8,8 @@ public class Interactable : MonoBehaviour, IIntractable
     public Animator Dooranimator;
     public bool isdooropen;
 
+    
+
     public void Interact()
     {
         if (isdooropen && Input.GetKeyDown(KeyCode.E))
@@ -31,10 +33,17 @@ public class Interactable : MonoBehaviour, IIntractable
 
     public void PickUp()
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             
-            
+            if(PickUpSlot.childCount == 1)
+            {
+                GameObject child = PickUpSlot.GetChild(0).gameObject;
+                child.GetComponent<Collider>().enabled = true;
+                child.transform.SetParent(null);
+                child.GetComponent<Rigidbody>().useGravity = true;
+            }
             Object.GetComponent<Collider>().enabled = false;
             Object.GetComponent<Rigidbody>().useGravity = false;
             Object.transform.SetParent(PickUpSlot.transform);

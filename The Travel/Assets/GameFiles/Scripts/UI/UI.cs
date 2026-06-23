@@ -43,6 +43,7 @@ public class UI : MonoBehaviour
     }
     public void MainMenuBtnClicked()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }   
 }
