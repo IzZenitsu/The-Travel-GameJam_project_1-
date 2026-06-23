@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/GameFiles/Scenes/TimeTravel3Year.unity
-    guid: ce202b0feef46b74292fc8b33cdb94e2
+    path: Assets/GameFiles/Scenes/TimeTravelToYear3.unity
+    guid: 6c23407ad30fdef409df7c3276dc523f
   - enabled: 1
-    path: Assets/GameFiles/Scenes/TimeTravel6Year.unity
-    guid: 80abc8632fcd2bb4099eb0727e6f3447
+    path: Assets/GameFiles/Scenes/TimeTravelToYear6.unity
+    guid: 03e218d035464014380ef9714eb57562
   - enabled: 1
-    path: Assets/GameFiles/Scenes/TimeTravel9Year.unity
-    guid: 533e768582ae896488157bd494cbd9c2
+    path: Assets/GameFiles/Scenes/TimeTravelToYear9.unity
+    guid: b3f79bf49178a1c4eb479c3dc52a291a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
