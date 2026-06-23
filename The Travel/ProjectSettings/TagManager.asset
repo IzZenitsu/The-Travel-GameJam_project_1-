@@ -7,6 +7,7 @@ TagManager:
   - Door
   - Objects
   - Clock
+  - TV
   layers:
   - Default
   - TransparentFX

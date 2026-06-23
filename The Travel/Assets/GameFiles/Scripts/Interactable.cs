@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour, IIntractable
@@ -7,6 +8,8 @@ public class Interactable : MonoBehaviour, IIntractable
     public Transform PickUpSlot;
     public Animator Dooranimator;
     public bool isdooropen;
+    public GameObject MarioUI;
+    public Camera camera;
 
     
 
@@ -50,5 +53,13 @@ public class Interactable : MonoBehaviour, IIntractable
             Object.transform.position = PickUpSlot.transform.position;
         }
       
+    }
+    public void TvToGame()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            MarioUI.SetActive(true);
+            camera.enabled = true;
+        }
     }
 }
