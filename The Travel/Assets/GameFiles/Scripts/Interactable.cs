@@ -59,6 +59,7 @@ public class Interactable : MonoBehaviour, IIntractable
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Cursor.lockState = CursorLockMode.None;
             Player.SetActive(false);
             MarioUI.SetActive(true);
             camera.enabled = true;
