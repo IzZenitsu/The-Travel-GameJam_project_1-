@@ -9841,17 +9841,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1465106482}
     - target: {fileID: 2205481437563570517, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
-      propertyPath: ClockHand
-      value: 
-      objectReference: {fileID: 973224920}
-    - target: {fileID: 2205481437563570517, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
       propertyPath: clockHand
       value: 
       objectReference: {fileID: 973224920}
-    - target: {fileID: 2205481437563570517, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
-      propertyPath: clockInteraction
-      value: 
-      objectReference: {fileID: 1378176667}
     - target: {fileID: 2205481437563570517, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
       propertyPath: ClockHandAnimator
       value: 
@@ -9872,10 +9864,6 @@ PrefabInstance:
       propertyPath: interactiveObj
       value: 
       objectReference: {fileID: 239494823}
-    - target: {fileID: 5435171769672198997, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
-      propertyPath: m_Depth
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7261659112931104393, guid: d7f6a0cef7980e146841071fc18036f8, type: 3}
       propertyPath: m_Name
       value: Player
