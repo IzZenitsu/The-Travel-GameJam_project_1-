@@ -7,6 +7,7 @@ public class PlayerInteractor : MonoBehaviour
     public LayerMask Layer;
     public GameObject interactiveUI;
     public TextMeshProUGUI interactiveObj;
+   
 
     void Update()
     {
@@ -28,6 +29,15 @@ public class PlayerInteractor : MonoBehaviour
                 {
                     interact.Interact();
                     interactiveObj.text = "Open Door";
+                }
+                else if (hit.collider.CompareTag("TV"))
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        interactiveUI.SetActive(false);
+                    }
+                    interact.TvToGame();
+                    interactiveObj.text = "Play";
                 }
             }
 

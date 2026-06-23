@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour, IIntractable
     public bool isdooropen;
     public GameObject MarioUI;
     public Camera camera;
+    public GameObject Player;
 
     
 
@@ -58,6 +59,7 @@ public class Interactable : MonoBehaviour, IIntractable
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Player.SetActive(false);
             MarioUI.SetActive(true);
             camera.enabled = true;
         }

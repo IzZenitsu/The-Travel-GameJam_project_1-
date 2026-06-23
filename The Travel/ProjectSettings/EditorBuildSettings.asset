@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/GameFiles/Scenes/TimeTravelToYear3.unity
     guid: 6c23407ad30fdef409df7c3276dc523f
   - enabled: 1
-    path: Assets/GameFiles/Scenes/TimeTravelToYear6.unity
+    path: Assets/GameFiles/Scenes/TimeTravelToYear9.unity
     guid: 03e218d035464014380ef9714eb57562
   - enabled: 1
-    path: Assets/GameFiles/Scenes/TimeTravelToYear9.unity
+    path: Assets/GameFiles/Scenes/TimeTravelToYear6.unity
     guid: b3f79bf49178a1c4eb479c3dc52a291a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

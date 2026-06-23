@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
     {
         PauseMenuControl();
     }
-    public void PauseMenuControl()
+    private void PauseMenuControl()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
