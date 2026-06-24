@@ -133,7 +133,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -394,4 +394,7 @@ MonoBehaviour:
   MainCamera: {fileID: 5435171769672198997}
   Offset: {x: 0, y: 0, z: 0}
   player: {fileID: 7261659112931104393}
-  ClockHand: {fileID: 6983545135485043585, guid: 7304e95d0a90d7f4fac90858080370e3, type: 3}
+  ClockHandAnimator: {fileID: 0}
+  clockHand: {fileID: 0}
+  clockInteractionUI: {fileID: 0}
+  spinUI: {fileID: 0}

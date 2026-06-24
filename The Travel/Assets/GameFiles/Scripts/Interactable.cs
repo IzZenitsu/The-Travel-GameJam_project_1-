@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour, IIntractable
@@ -7,6 +8,11 @@ public class Interactable : MonoBehaviour, IIntractable
     public Transform PickUpSlot;
     public Animator Dooranimator;
     public bool isdooropen;
+    public GameObject MarioUI;
+    public Camera camera;
+    public GameObject Player;
+
+    
 
     public void Interact()
     {
@@ -31,15 +37,32 @@ public class Interactable : MonoBehaviour, IIntractable
 
     public void PickUp()
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             
-            
+            if(PickUpSlot.childCount == 1)
+            {
+                GameObject child = PickUpSlot.GetChild(0).gameObject;
+                child.GetComponent<Collider>().enabled = true;
+                child.transform.SetParent(null);
+                child.GetComponent<Rigidbody>().useGravity = true;
+            }
             Object.GetComponent<Collider>().enabled = false;
             Object.GetComponent<Rigidbody>().useGravity = false;
             Object.transform.SetParent(PickUpSlot.transform);
             Object.transform.position = PickUpSlot.transform.position;
         }
       
+    }
+    public void TvToGame()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Player.SetActive(false);
+            MarioUI.SetActive(true);
+            camera.enabled = true;
+        }
     }
 }

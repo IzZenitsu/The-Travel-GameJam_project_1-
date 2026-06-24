@@ -4,5 +4,6 @@ interface IIntractable
 {
     
     void PickUp();
-    void Interact(); 
+    void Interact();
+    void TvToGame();
 }

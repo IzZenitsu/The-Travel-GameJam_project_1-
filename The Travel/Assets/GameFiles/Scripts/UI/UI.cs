@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 
 {
+    public GameObject MarioPlayer;
     public GameObject pausePanel;
+    public GameObject MarioUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +18,7 @@ public class UI : MonoBehaviour
     {
         PauseMenuControl();
     }
-    public void PauseMenuControl()
+    private void PauseMenuControl()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -43,6 +45,13 @@ public class UI : MonoBehaviour
     }
     public void MainMenuBtnClicked()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }   
+    public void MarioPlayButton()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        MarioUI.SetActive(false);
+        MarioPlayer.SetActive(true);
+    }
 }

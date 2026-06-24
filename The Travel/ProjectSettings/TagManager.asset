@@ -7,6 +7,9 @@ TagManager:
   - Door
   - Objects
   - Clock
+  - TV
+  - BlockGround
+  - Teleporter
   layers:
   - Default
   - TransparentFX

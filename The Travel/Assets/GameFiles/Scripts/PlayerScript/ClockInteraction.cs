@@ -84,7 +84,7 @@ public class ClockInteraction : MonoBehaviour
     }
     void ClockHandSpin()
     {
-        ClockRotationAngleCount = Random.Range(0, 3);
+        ClockRotationAngleCount = Random.Range(1, 4);
 
         if (ClockRotationAngleCount == 1)
         {
